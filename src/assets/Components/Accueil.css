@@ -1,0 +1,42 @@
+
+.header{
+    background-color: rgb(61, 24, 171);
+    height: 30;
+    width: auto;
+    
+}
+.unstyled-list{
+    list-style-type: none;
+    white-space: nowrap;
+}
+.line{
+    display: inline-block;
+    padding: 20px;
+    margin: 0px;
+
+}
+.footer{
+    background-color: rgb(61, 24, 171);  
+    margin-top: 0%;
+    margin-left: 0%;
+    text-align: center;
+
+
+}
+.footer-line{
+    margin-bottom: 0px;
+    color: #e3eae7;
+    font-size: 25px;
+}
+.pi{
+    
+    text-align: center;
+}
+.pl{
+    text-align: center;
+    font-size: 220%;
+    margin-top: 0px;
+    background-color: rgb(97, 142, 176);
+}
+
+
