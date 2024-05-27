@@ -11,7 +11,9 @@ import Documentaion from "./assets/Components/Documentation.tsx";
 import Apropos from "./assets/Components/Apropos.tsx";
 import Accueil from "./assets/Components/Accueil.tsx";
 import Dashboard from "./assets/Components/Dashboard.tsx";
-import ListePatients from "./assets/Components/ListePatients.tsx";
+import ListePatients from "./assets/Components/Patients/ListePatients.tsx";
+import Mer from "./assets/Components/tests/AjoutTypeTest.tsx";
+import He from "./He.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,41 +21,43 @@ const router = createBrowserRouter([
     element: <Accueil />,
   },
   {
-    path:"inscription",
-    element:<Inscription/>,
+    path: "inscription",
+    element: <Inscription />,
   },
   {
-    path:"connexion",
-    element:<Connexion/>,
-
+    path: "connexion",
+    element: <Connexion />,
   },
   {
-    path:"contact",
-    element:<Contact/>,
-
+    path: "contact",
+    element: <Contact />,
   },
   {
-    path:"dashboard",
-    element:<Dashboard/>,
-
+    path: "dashboard",
+    element: <Dashboard />,
   },
   {
-    path:"documentation",
-    element:<Documentaion/>,
-
+    path: "documentation",
+    element: <Documentaion />,
   },
   {
-    path:"apropos",
-    element:<Apropos/>,
-
+    path: "apropos",
+    element: <Apropos />,
   },
-  
- 
+
   {
-    path:"listepatient",
-    element:<ListePatients/>,
-
+    path: "listepatient",
+    element: <ListePatients />,
   },
+  {
+    path: "mer",
+    element: <Mer/>,
+  },
+  {
+    path: "he",
+    element: <He/>,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

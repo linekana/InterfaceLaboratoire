@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-
 interface PersonalStaff {
   name: string;
   surname: string;
@@ -14,7 +13,7 @@ interface PersonalStaff {
   password: string;
 }
 
-const Inscription: React.FC = () => {
+const AjoutUser: React.FC = () => {
   const [isInscrit, setInscrit] = useState(false);
   const [personalStaff, setpersonalStaff] = useState<PersonalStaff>({
     name: "",
@@ -80,14 +79,12 @@ const Inscription: React.FC = () => {
   return (
     <div>
       <form
-        className="bg-gray-800   text-center shadow-md rounded  pt-6 pb-8 mb-4  absolute right-0"
+        className=" text-center shadow-md  border rounded  pt-2 pb-8 mb-4 bg-slate-50"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-green-500 "> ajout utilisateur</h1>
-        <br />
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className=" text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-10 h-7"
             type="text"
             name="name"
             value={personalStaff.name}
@@ -96,10 +93,9 @@ const Inscription: React.FC = () => {
           />
         </label>
         <br />
-        <br />
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className=" text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
             type="text"
             name="surname"
             value={personalStaff.surname}
@@ -110,6 +106,7 @@ const Inscription: React.FC = () => {
         <br />
         <br />
         <label>
+          role:
           <select
             id="roleUser.idRoleUser"
             name="roleUser.idRoleUser"
@@ -123,10 +120,11 @@ const Inscription: React.FC = () => {
             <option value="4">caissier</option>
           </select>
         </label>
-        *
+        <br/>
+        <br/>
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className="  text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
             type="text"
             name="username"
             value={personalStaff.username}
@@ -138,19 +136,19 @@ const Inscription: React.FC = () => {
         <br />
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className=" text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
             type="email"
             name="email"
             value={personalStaff.email}
             onChange={handleChange}
             placeholder="email"
           />
-        </label>{" "}
+        </label>
         <br />
         <br />
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className="text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
             type="text"
             name="address"
             value={personalStaff.address}
@@ -162,7 +160,7 @@ const Inscription: React.FC = () => {
         <br />
         <label>
           <input
-            className="shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
+            className=" text-center shadow appearance-none border rounded   text-gray-700 leading-tight focus:outline-none focus:shadow-outline  h-7"
             type="text"
             name="tel"
             value={personalStaff.tel}
@@ -174,7 +172,7 @@ const Inscription: React.FC = () => {
         <br />
         <label>
           <input
-            className="shadow appearance-none border border-blue-500 rounded  text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline h-7"
+            className=" text-center shadow appearance-none border border-blue-500 rounded  text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline h-7"
             type="password"
             name="password"
             value={personalStaff.password}
@@ -204,8 +202,9 @@ const Inscription: React.FC = () => {
           <p className="text-blue-500">ajout effectué avec succes!</p>
         )}
       </form>
+      
     </div>
   );
 };
 
-export default Inscription;
+export default AjoutUser;
